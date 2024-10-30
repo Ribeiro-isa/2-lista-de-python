@@ -1,0 +1,85 @@
+# 1) Imprimir seu nome com uma letra por linha
+def imprimir_nome_por_linha(nome):
+    for letra in nome:
+        print(letra)
+
+# Exemplo de uso:
+imprimir_nome_por_linha("Seu Nome")
+
+
+# 2) Função que conta o número de vogais em uma string
+def contar_vogais(texto):
+    vogais = 'aeiouAEIOU'
+    contador = sum(1 for letra in texto if letra in vogais)
+    return contador
+
+# Exemplo de uso:
+print(contar_vogais("Ciência de Dados"))  # Saída: 7
+
+
+# 3) Desenha moldura
+def desenha_moldura(linhas=1, colunas=1):
+    linhas = max(1, min(linhas, 20))
+    colunas = max(1, min(colunas, 20))
+
+    print("+" + "-" * (colunas - 2) + "+")
+    for _ in range(linhas - 2):
+        print("|" + " " * (colunas - 2) + "|")
+    if linhas > 1:
+        print("+" + "-" * (colunas - 2) + "+")
+
+# Exemplo de uso:
+desenha_moldura(5, 10)
+
+
+# 4) Função que retorna o resto de uma divisão
+def resto_divisao(a, b):
+    return a % b
+
+# Exemplo de uso:
+print(resto_divisao(10, 3))  # Saída: 1
+
+
+# 5) Calcula o preço do aluguel de carro
+def preco_aluguel_carro(km_percorridos, dias_alugados):
+    preco = dias_alugados * 60 + km_percorridos * 0.15
+    return preco
+
+# Exemplo de uso:
+print(preco_aluguel_carro(100, 3))  # Saída: 195.0
+
+
+# 6) Calcula a perda de dias de vida de um fumante
+def perda_de_vida(cigarros_por_dia, anos_fumando):
+    total_cigarros = cigarros_por_dia * anos_fumando * 365
+    minutos_perdidos = total_cigarros * 10
+    dias_perdidos = minutos_perdidos / (24 * 60)
+    return dias_perdidos
+
+# Exemplo de uso:
+print(perda_de_vida(10, 5))  # Saída: 127.08 (aproximadamente)
+
+
+# 7) Validar e corrigir número de telefone
+def corrigir_telefone(telefone):
+    telefone = telefone.replace("-", "")
+    if len(telefone) == 7:
+        telefone = "3" + telefone
+    return telefone[:4] + "-" + telefone[4:]
+
+# Exemplo de uso:
+print(corrigir_telefone("1234567"))  # Saída: 3123-4567
+print(corrigir_telefone("31234567"))  # Saída: 3123-4567
+
+
+# 8) Função Calculadora que avalia uma expressão matemática
+def calculadora(expressao):
+    try:
+        resultado = eval(expressao)
+        return resultado
+    except:
+        return "Expressão inválida"
+
+# Exemplo de uso:
+print(calculadora("4+5"))  # Saída: 9
+print(calculadora("10/2"))  # Saída: 5.0
