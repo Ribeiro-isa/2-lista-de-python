@@ -1,0 +1,58 @@
+
+#3.5 Desenvolva um programa que solicite o preço de uma mercadoria e o percentual de desconto. Exiba o valor do desconto e o preço a pagar.
+
+preço = float(input("Digite o preço da mercadoria: "))
+desconto = float(input("Digite o percentual de desconto: "))
+
+valor_desconto =  preço * (desconto / 100)
+
+preço_a_pagar = preço - valor_desconto
+
+print(f"O valor do desconto é: R${valor_desconto:.2f}")
+
+print(f"O preço a pagar é: R${preço_a_pagar:.2f}")
+
+print(f"Obrigada pela compra! Tenha um bom dia!")
+
+#3.6 Escreva um programa que calcule o tempo de uma viagem de carro. Pergunte a distância a percorrer e a velocidade média esperada para a viagem.
+
+distância = float(input("Digite a distância a percorrer (em km): "))
+velocidade_média = float(input("Digite a velocidade média esperada (em km/h): "))
+
+tempo_viagem = distância / velocidade_média
+
+print(f"O tempo estimado de viagem é de {tempo_viagem:.2f} horas.") 
+
+print (input("Boa viagem!"))
+
+#3.7. Escreva um programa que converta uma temperatura digitada em °C em °F. A fórmula para a conversão é:
+
+celsius = float(input("Digite a temperatura em graus Celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+print(f"{celsius} graus Celsius equivalem a {fahrenheit} graus Fahrenheit.")
+
+# 3.8 - Programa de cálculo do aluguel de carro
+
+# Entrada de dados
+km = float(input("Digite a quantidade de km percorridos: "))
+dias = int(input("Digite a quantidade de dias que o carro foi alugado: "))
+
+# Cálculo dos custos
+preco_dias = dias * 60
+preco_km = km * 0.15
+total = preco_dias + preco_km
+
+# Saída de dados
+print(f"\nPreço por dias alugados: R${preco_dias:.2f}")
+print(f"Preço por km rodado: R${preco_km:.2f}")
+print(f"Preço total a pagar: R${total:.2f}")
+ 
+ # Não consegui fazer a 3.8
+
+ #3.9 Desenvolva um algoritmo para calcular a redução do tempo de vida de um fumante. Pergunte a quantidade de cigarros fumados por dia e quantos anos ele já fumou. Considere que um fumante perde 10 minutos de vida a cada cigarro, e calcule quantos dias de vida um fumante perderá. Ao final exiba o tempo total em dias. 
+
+cigarros_por_dia = int(input("Digite a quantidade de cigarros fumados por dia: "))
+anos_fumando = int(input("Digite a quantidade de anos que você já fumou: ")
+
+  print(f"Você perdeu {tempo_perdido_dias} dias de vida.")
+
